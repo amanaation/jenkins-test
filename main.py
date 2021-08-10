@@ -1,3 +1,5 @@
+import logging
+
 # import os
 # # Use the package we installed
 # from slack_bolt import App
@@ -20,8 +22,8 @@
 #     app.start(port=int(os.environ.get("PORT", 3000)))
 
 
-print(" starting code")
+logging.error(" starting code")
 
-print(1997 + 1997 + 1997 + 1996 + 1998)
+logging.error(1997 + 1997 + 1997 + 1996 + 1998)
 
-print(" Ending code")
+logging.error(" Ending code")
