@@ -12,7 +12,6 @@ pipeline {
                 stash(name: 'compiled-results', includes: '*.py*')
             }
         }
-    }
     stage('Deliver') {
             agent any
             environment {
@@ -32,4 +31,5 @@ pipeline {
                 }
             }
         }
+    }
 }
