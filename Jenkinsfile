@@ -26,7 +26,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts "${env.BUILD_ID}/sources/dist/github_Actions"
+                    archiveArtifacts "${env.BUILD_ID}/dist/github_Actions"
                     sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
                 }
             }
