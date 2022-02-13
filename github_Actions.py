@@ -48,15 +48,6 @@ class TriggerActions:
 
 if __name__ == "__main__":
     ta = TriggerActions()
-    dispatch_status_code, _ = ta.dispatch_workflow()
-    if dispatch_status_code == 422:
-        print("Successfully Dispatched Workflow !!!")
-        rerun_status_code, _ = ta.rerun_workflow()
-        if rerun_status_code == 200 or rerun_status_code == 201:
-            print("Successfully Ran Workflow !!!")
-        else:
-            print(f"Workflow dispatch status : {rerun_status_code} \nData : {_}")
-
-    else:
-        print(f"Workflow dispatch status : {dispatch_status_code} \nData : {_}")
-
+    print("Dispatching Workflow !!")
+    dispatch_status_code, _ = ta.rerun_workflow()
+    print(dispatch_status_code, "\n", _)
