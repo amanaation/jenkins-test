@@ -11,6 +11,7 @@ pipeline {
                 sh 'python3 -m venv venv '
                 sh 'source venv/bin/activate '
                 sh 'ls -la'
+                sh 'ls -la  /.local'
                 sh 'pip3 -V'
                 sh 'pip3 install --user python-dotenv '
                 sh 'pip3 install --user requests --user'
