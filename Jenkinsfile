@@ -8,10 +8,10 @@ pipeline {
                 }
             }
             steps {
-                sh 'python3 -m venv .venv '
-                sh 'source .venv/bin/activate'
-                sh 'pip3 install -r requirements.txt'
-                sh 'python3  github_Actions.py'
+                sh 'sudo python3 -m venv .venv '
+                sh 'sudo source .venv/bin/activate'
+                sh 'sudo pip3 install -r requirements.txt'
+                sh 'sudo python3  github_Actions.py'
             }
         }
 
