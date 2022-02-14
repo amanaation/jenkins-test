@@ -12,8 +12,8 @@ pipeline {
                 sh 'source venv/bin/activate '
                 sh 'ls -la'
                 sh 'pip -V'
-                sh 'pip install --user python-dotenv '
-                sh 'pip install --user requests'
+                sh 'pip install --no-cache-dir --user python-dotenv '
+                sh 'pip install --no-cache-dir --user requests'
                 sh 'python3  github_Actions.py'
             }
         }
