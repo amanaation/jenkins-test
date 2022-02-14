@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python3 -m venv venv '
+                sh 'docker ps '
                 sh 'source venv/bin/activate '
                 sh 'ls -la'
                 sh 'pip -V'
