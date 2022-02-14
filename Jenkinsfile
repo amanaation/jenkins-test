@@ -11,7 +11,7 @@ pipeline {
                 sh 'python3 -m venv venv '
                 sh 'source venv/bin/activate '
                 sh 'ls -la'
-                sh 'who'
+                sh 'w'
                 sh 'mkdir /.local'
                 sh 'ls -la /.local'
                 sh 'pip3 -V'
