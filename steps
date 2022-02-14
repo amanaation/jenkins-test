@@ -1,0 +1,18 @@
+## Steps to install jenkins on ec2instance t2-micro
+
+sudo yum install java-1.8.0-openjdk-devel
+curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo amazon-linux-extras install epel -y
+sudo yum install jenkins
+sudo systemctl start jenkins
+systemctl status jenkins
+sudo systemctl enable jenkins
+
+sudo yum install docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -a -G docker jenkins
+sudo systemctl restart jenkins
+sudo chmod 777 /var/run/docker.sock
+sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace
