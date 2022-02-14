@@ -8,11 +8,11 @@ pipeline {
                 }
             }
             steps {
-                sh 'python3 -m venv .venv ||
-                source .venv/bin/activate ||
-                pip3 install -r requirements.txt ||
-                python3  github_Actions.py'
-                stash(name: 'compiled-results', includes: '*.py*')
+                sh 'python3 -m venv .venv '
+                sh 'source .venv/bin/activate'
+                sh 'pip3 install -r requirements.txt'
+                sh 'python3  github_Actions.py'
+                # stash(name: 'compiled-results', includes: '*.py*')
             }
         }
 
