@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'ls -la'
                 sh 'pip -V'
-                sh 'pip3 install --no-cache-dir --user python-dotenv '
+                sh '/usr/local/lib/python3.7/site-packages/pip install  --user python-dotenv '
                 sh 'pip3 install --no-cache-dir --user requests'
                 sh 'python3  github_Actions.py'
             }
